@@ -126,7 +126,7 @@ button {
 }
 
 .on-barHover-percussion {
-  background-color: #191919;
+  background-color: rgb(50, 50, 50);
 }
 
 .on {
@@ -189,7 +189,7 @@ button {
 }
 
 .accidental {
-  background-color: black;
+  background-color: rgb(50, 50, 50);
   color: white;
 }
 
@@ -319,7 +319,7 @@ button {
 }
 
 .ui-button {
-  outline: 3px solid black;
+  outline: 3px solid rgb(50, 50, 50);
   width: 100px;
   margin: 0 10px;
 }
