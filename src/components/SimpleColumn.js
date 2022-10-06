@@ -33,7 +33,7 @@ const SimpleColumn = ({ started, playing, column, columnIndex, position, applyPi
             const stretch = () => {
                 setStretching(stretching => !stretching)
             }
-            setTimeout(stretch, (columnIndex * 250 ))
+            setTimeout(stretch, ((columnIndex * 250) + 250))
         }
     }, [playing])
 

@@ -43,7 +43,7 @@ button {
 
 .save-popup {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: -300px;
   padding-top: 3%;
   display: flex;
@@ -203,18 +203,44 @@ button {
   align-items: flex-end;
 }
 
+.head {
+  position: relative;
+  width: auto;
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.head img {
+  height: 105%;
+}
+
 .stretching {
   animation: stretch 5500ms infinite;
+}
+
+.head.stretching {
+  animation: head-stretch 5500ms infinite;
 }
 
 .unstretch {
   animation: stretch 5500ms;
 }
 
+.head.unstretch {
+  animation: head-stretch 5500ms;
+}
+
 
 @keyframes stretch {
   50% {
     height: 64%;
+    margin-bottom: 2%;
+  }
+}
+
+@keyframes head-stretch {
+  50% {
     margin-bottom: 2%;
   }
 }
@@ -323,20 +349,6 @@ button {
   width: 100px;
   margin: 0 10px;
 }
-
-/* .toggled {
-  animation: glow 1000ms infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px -10px #eef4ae;
-  }
-
-  to {
-    box-shadow: 0 0 10px 10px #eef4ae;
-  }
-} */
 
 .inputs-container {
   margin-top: 4%;
