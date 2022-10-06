@@ -41,6 +41,31 @@ button {
   margin: 1%;
 }
 
+.save-popup {
+  width: 100%;
+  position: absolute;
+  top: -300px;
+  padding-top: 3%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.save-popup.show {
+  animation: popup 2000ms;
+}
+
+@keyframes popup {
+  25% {
+    top: 0px;
+  }
+
+  50% {
+    top: 0px
+  }
+  
+}
+
 .centered-content {
   display: flex;
   justify-content: center;

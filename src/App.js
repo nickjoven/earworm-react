@@ -89,6 +89,7 @@ const App = () => {
   const [started, setStarted] = useState(false)
   const [playing, setPlaying] = useState(false)
   const [position, setPosition] = useState(0)
+  const [showing, setShowing] = useState(false)
 
   useEffect(() => {
     const load = () => {
@@ -212,11 +213,22 @@ const App = () => {
     obj.sequence = sequence
     obj.bpm = bpm
     localStorage.setItem("sequence", JSON.stringify(obj))
+    show()
+  }
+
+  const show = () => {
+    setShowing(true)
+    setTimeout(setShowing, 1400, false)
   }
 
 
   return (
     <div className='App' >
+      <div className={`save-popup ${showing ? 'show' : ''}`}>
+        <div>
+          {showing ? 'Worm saved!' : ''}
+        </div>
+      </div>
       <SimpleEditor detailView={detailView} started={started} playing={playing} sequence={sequence} position={position} clearColumn={clearColumn} applyPitchPattern={applyPitchPattern} toggleNote={toggleNote} />
       <div className='inputs-container'>
         <div className='clear-button-holder'>
