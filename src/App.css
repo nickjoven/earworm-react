@@ -241,7 +241,6 @@ button {
 }
 
 .simple-percussion-container {
-  height: 180px;
   margin-top: 2px;
 }
 
@@ -260,7 +259,7 @@ button {
 }
 
 .simple-percussion-row {
-  height: 14.5px;
+  height: 15.5px;
   display: flex;
 }
 
