@@ -11,20 +11,20 @@ const BeatsPerSequence = 8
 const stepsPerSequence = stepsPerBeat * BeatsPerSequence
 
 const sampler = new Tone.Sampler({
-  'A0': '/kick.wav',
-  'A#0': '/snare.wav',
-  'B0': '/ophh.wav',
-  'C1': '/clhh.wav',
-  'C#1': '/ChipShop_GB_Perc_17.wav',
-  'D1': '/ChipShop_GB_Perc_16.wav',
-  'D#1': '/ChipShop_GB_Perc_15.wav',
-  'E1': '/S_000_066.wav',
-  'F1': '/S_000_062.wav',
-  'F#1': '/S_000_058.wav',
-  'B1': '/ChipShop_GB_Perc_10.wav',
-  'C#2': '/ChipShop_GB_Bass_Csharp_02.wav',
-  'E4': '/ChipShop_GB_Lead_E_07.wav',
-  'G#5': '/ChipShop_GB_Lead_Gsharp_09.wav',
+  'A0': './kick.wav',
+  'A#0': './snare.wav',
+  'B0': './ophh.wav',
+  'C1': './clhh.wav',
+  'C#1': './ChipShop_GB_Perc_17.wav',
+  'D1': './ChipShop_GB_Perc_16.wav',
+  'D#1': './ChipShop_GB_Perc_15.wav',
+  'E1': './S_000_066.wav',
+  'F1': './S_000_062.wav',
+  'F#1': './S_000_058.wav',
+  'B1': './ChipShop_GB_Perc_10.wav',
+  'C#2': './ChipShop_GB_Bass_Csharp_02.wav',
+  'E4': './ChipShop_GB_Lead_E_07.wav',
+  'G#5': './ChipShop_GB_Lead_Gsharp_09.wav',
 }).toDestination();
 
 const play = (sampler = sampler, note, time) => {
