@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/earworm-react/static/css/main.4a92f83d.css",
+    "main.css": "/earworm-react/static/css/main.9f646a28.css",
     "main.js": "/earworm-react/static/js/main.2271f01a.js",
     "static/js/988.87e60142.chunk.js": "/earworm-react/static/js/988.87e60142.chunk.js",
     "index.html": "/earworm-react/index.html",
-    "main.4a92f83d.css.map": "/earworm-react/static/css/main.4a92f83d.css.map",
+    "main.9f646a28.css.map": "/earworm-react/static/css/main.9f646a28.css.map",
     "main.2271f01a.js.map": "/earworm-react/static/js/main.2271f01a.js.map",
     "988.87e60142.chunk.js.map": "/earworm-react/static/js/988.87e60142.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a92f83d.css",
+    "static/css/main.9f646a28.css",
     "static/js/main.2271f01a.js"
   ]
 }
