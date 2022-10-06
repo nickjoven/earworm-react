@@ -89,6 +89,17 @@ const App = () => {
   const [started, setStarted] = useState(false)
   const [playing, setPlaying] = useState(false)
   const [position, setPosition] = useState(0)
+
+  useEffect(() => {
+    const load = () => {
+      if (localStorage.getItem('sequence')) {
+        let req = (JSON.parse(localStorage.getItem('sequence')))
+        setSequence(req.sequence)
+        setBpm(req.bpm)
+      }
+    }
+    load()
+  }, [])
   
   const start = () => {
     if (!started) {
@@ -196,6 +207,13 @@ const App = () => {
     setDetailView(prev => !detailView)
   }
 
+  const save = () => {
+    let obj = {}
+    obj.sequence = sequence
+    obj.bpm = bpm
+    localStorage.setItem("sequence", JSON.stringify(obj))
+  }
+
 
   return (
     <div className='App' >
@@ -203,6 +221,7 @@ const App = () => {
       <div className='inputs-container'>
         <div className='clear-button-holder'>
           <button className='ui-button' onClick={clearSequence}>Clear</button>
+          <button className='ui-button' onClick={save}>Save</button>
         </div>
         <Inputs bpm={bpm} handleBpmChange={handleBpmChange} />
         <UiButtons start={start} playing={playing} showDetail={showDetail} />
