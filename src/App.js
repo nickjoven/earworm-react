@@ -5,6 +5,7 @@ import SimpleEditor from './components/SimpleEditor'
 import Inputs from './components/Inputs'
 import UiButtons from './components/UiButtons'
 import Row from './components/Row'
+import Footer from './components/Footer'
 
 const stepsPerBeat = 4
 const BeatsPerSequence = 8
@@ -223,20 +224,36 @@ const App = () => {
 
 
   return (
-    <div className='App' >
+    <div className={`App  ${detailView ? 'gradient' : ''}`} >
       <div className={`save-popup ${showing ? 'show' : ''}`}>
         <div>
           {showing ? 'Worm saved!' : ''}
         </div>
       </div>
-      <SimpleEditor detailView={detailView} started={started} playing={playing} sequence={sequence} position={position} clearColumn={clearColumn} applyPitchPattern={applyPitchPattern} toggleNote={toggleNote} />
+      <SimpleEditor 
+        detailView={detailView} 
+        started={started} 
+        playing={playing} 
+        sequence={sequence} 
+        position={position} 
+        clearColumn={clearColumn} 
+        applyPitchPattern={applyPitchPattern} 
+        toggleNote={toggleNote} 
+      />
       <div className='inputs-container'>
         <div className='clear-button-holder'>
           <button className='ui-button' onClick={clearSequence}>Clear</button>
           <button className='ui-button' onClick={save}>Save</button>
         </div>
-        <Inputs bpm={bpm} handleBpmChange={handleBpmChange} />
-        <UiButtons start={start} playing={playing} showDetail={showDetail} />
+        <Inputs 
+          bpm={bpm} 
+          handleBpmChange={handleBpmChange} 
+        />
+        <UiButtons 
+          start={start} 
+          playing={playing} 
+          showDetail={showDetail} 
+        />
       </div>
       { detailView 
       ?
@@ -254,7 +271,14 @@ const App = () => {
           <div className='grid-container'>
             {sequence.map((row, rowIndex) => {
               return (
-                <Row key={rowIndex} rowIndex={rowIndex} row={row} play={play} toggleNote={toggleNote} position={position} />
+                <Row 
+                  key={rowIndex} 
+                  rowIndex={rowIndex} 
+                  row={row} 
+                  play={play} 
+                  toggleNote={toggleNote} 
+                  position={position} 
+                />
                 )
               })}
             </div>
@@ -263,6 +287,7 @@ const App = () => {
       : 
       <></>
       }
+      <Footer detailView={detailView} />
     </div>
   );
 }
